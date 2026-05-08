@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #00ff00;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    letter-spacing: 3px;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    }
+    50% {
+        text-shadow: 0 0 30px #00ff00, 0 0 60px #00ff00, 0 0 90px #00ff00;
+    }
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.5em;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.points {
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+#pongCanvas {
+    display: block;
+    margin: 0 auto 30px;
+    background: #000;
+    border: 3px solid #00ff00;
+    box-shadow: 0 0 20px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.1);
+    cursor: none;
+}
+
+.controls {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.controls strong {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
